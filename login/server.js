@@ -13,6 +13,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 app.set('view engine','ejs');
 app.set('views','views');
+// app.set('views',path.join(__dirname,'views'))
 
 app.use(session({
     secret : uuidv4(),
@@ -29,4 +30,4 @@ app.get('/',(req,res)=>{
     res.render('base',{title:'instagram'});
 })
 
-app.listen(PORT,()=>console.log('Server has started.'))
+app.listen(PORT,()=>console.log(`Server has started}`))
